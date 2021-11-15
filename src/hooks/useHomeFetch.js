@@ -73,7 +73,7 @@ export const useHomeFetch = () => {
     // Write to session storeage
     useEffect(() => {
         if (!searchQuery) sessionStorage.setItem('homeState', JSON.stringify(state))
-        console.log(state)
+        // console.log(state)
         
     }, [searchQuery, state])
 

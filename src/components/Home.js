@@ -35,8 +35,8 @@ const Home = () => {
     } = useHomeFetch();
 
     // state.results[0] = null;
-    console.log(state.results[0]);
-    console.log(error);
+    // console.log(state.results[0]);
+    // console.log(error);
 
     // if (error) return <div>Something is Wrong ...</div>;
     
