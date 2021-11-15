@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Api from '../Api';
 
 // session storage from base
-import { isPersistedState } from '../base';
+import { isPersistedState, isPersistedStateNotNull } from '../base';
 
 // Initial State
 const  initialState ={

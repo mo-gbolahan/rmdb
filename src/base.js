@@ -15,7 +15,22 @@ export const convCur = currency => {
     return formatter.format(currency);
 }; 
 
+// check if there is a persisted state and its not empty
 export const isPersistedState = stateName => {
     const sessionState = sessionStorage.getItem(stateName);
-    return sessionState && JSON.parse(sessionState)
+
+    const sessionStateResult = JSON.parse(sessionState).results;
+    // console.log(sessionStateResult)
+    if (sessionState && sessionStateResult.length !== 0 ) return  JSON.parse(sessionState)
 }
+
+// check if persisted state is not empty
+// export const isPersistedStateNotNull = stateName => {
+//     let sessionState = sessionStorage.getItem(stateName);
+//     sessionState = JSON.parse(sessionStorage);
+
+//     const r = sessionState.result;
+//     console.log(r)
+//     return sessionState;
+
+// }
