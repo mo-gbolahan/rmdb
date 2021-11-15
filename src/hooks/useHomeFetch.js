@@ -48,10 +48,19 @@ export const useHomeFetch = () => {
 
         if (!searchQuery) {
             const sessionState = isPersistedState('homeState');
+            
+            
+        
 
             if (sessionState) {
-                setState(sessionState)
-                return;
+                const sessionStateResult = sessionState.results;
+
+                if (sessionStateResult.length !== 0) {
+                    setState(sessionState)
+                    return;
+                }
+                
+                
             }
         }
         setState(initialState);

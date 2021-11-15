@@ -38,7 +38,7 @@ const Home = () => {
     // console.log(state.results[0]);
     // console.log(error);
 
-    // if (error) return <div>Something is Wrong ...</div>;
+    if (error) return <div>Something is Wrong ...</div>;
     
     return (
         <>
